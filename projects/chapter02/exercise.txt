@@ -1,0 +1,8 @@
+# Ex. 2.22
+
+public Date(String month, int day, int year)
+{
+	month = month;
+	day = day;
+	year = year;
+}
