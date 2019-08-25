@@ -12,6 +12,7 @@
 public class TicketMachine
 {
     // The price of a ticket from this machine.
+    //private int price;
     private int price;
     // The amount of money entered by a customer so far.
     private int balance;
@@ -24,12 +25,13 @@ public class TicketMachine
     public TicketMachine(int cost)
     {
         price = cost;
+        // int price = cost;
         balance = 0;
         total = 0;
     }
 
     /**
-     * @Return The price of a ticket.
+     * Return the price of a ticket.
      */
     public int getPrice()
     {
@@ -51,12 +53,12 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        if(amount > 0) {
-            balance = balance + amount;
+        if(amount < 0) {
+            System.out.println("Use a positive amount rather than: " +
+                                amount);
         }
         else {
-            System.out.println("Use a positive amount rather than: " +
-                               amount);
+            balance = balance + amount;
         }
     }
 
@@ -99,4 +101,17 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    /** 
+     * ex. 2.59. Trying to break refund balance.
+    
+    
+   public int refundBalance2()
+   {
+       return balance;
+       balance = 0;
+    }
+    */
+   
+   
 }

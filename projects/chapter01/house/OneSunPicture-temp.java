@@ -9,7 +9,7 @@
  * @author  Michael K�lling and David J. Barnes
  * @version 2016.02.29
  */
-public class OneSunPicture
+public class Picture
 {
     private Square wall;
     private Square window;
