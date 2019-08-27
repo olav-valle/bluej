@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Student
-comment0.text=\n\ Write\ a\ description\ of\ class\ Student\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=fullName\ studentId
-comment1.target=Student(java.lang.String,\ java.lang.String)
-comment1.text=\n\ Constructor.\n\ Parameters\ are\ stored\ in\ class\ wide\ fields.\n\ Credits\ are\ set\ to\ 0.\n
-comment2.params=
-comment2.target=java.lang.String\ getLoginName()
-numComments=3
