@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=BetterHeater
+comment0.text=\n\ App\ for\ controlling\ the\ thermostat\ of\ a\ heater.\n
+comment1.params=initialMinTemp\ initialMaxTemp
+comment1.target=BetterHeater(double,\ double)
+comment1.text=\n\ Constructor\ for\ instance\ of\ class\ Heater2\n\ Initializes\ the\ field\ temperature\ to\ 15.0\ degrees.\ \n\ Temperature\ unit\ unspecified.\n
+comment2.params=newIncrement
+comment2.target=void\ setIncrement(double)
+comment2.text=\n\ Sets\ the\ value\ of\ a\ temperature\ increment/decrement.\n\ Does\ not\ accept\ negative\ values.\n
+comment3.params=
+comment3.target=void\ warmer()
+comment3.text=\n\ Mutator\ for\ raising\ temperature\ by\ the\ defined\ increment.\n
+comment4.params=
+comment4.target=void\ cooler()
+comment4.text=\n\ Mutator\ for\ lowering\ temperature\ by\ the\ defined\ increment.\n
+comment5.params=
+comment5.target=double\ getTemperature()
+comment5.text=\n\ Accessor\ for\ the\ value\ of\ temperature.\n
+numComments=6
