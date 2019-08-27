@@ -11,6 +11,7 @@ dependency3.type=UsesDependency
 dependency4.from=Person
 dependency4.to=Canvas
 dependency4.type=UsesDependency
+
 dependency5.from=House
 dependency5.to=Square
 dependency5.type=UsesDependency
