@@ -27,7 +27,7 @@ public class Book
         borrowed = 0;
         courseText = bookCourseText;
     }
-    // Add methods here...
+    
     /**
      * Prints name of author to terminal.
      */
