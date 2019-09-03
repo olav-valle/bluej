@@ -18,7 +18,9 @@ public class ClockDisplay
     
     public void displayTime()
     {
-        System.out.println("The time is: " + hours.getValueAsString() + ":" + minutes.getValueAsString());
+        System.out.println("The time is: " + 
+            hours.getValueAsString() + ":" 
+            + minutes.getValueAsString());
     }
 
 }
