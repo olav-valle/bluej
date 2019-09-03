@@ -141,22 +141,30 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        // Simulate the printing of a ticket.
-        System.out.println("##################");
-        System.out.println("# The BlueJ Line");
-        System.out.println("# Ticket");
-        System.out.println("# " + price + " cents.");
-        System.out.println("##################");
-        // Subtract price from balance
-        balance -= price;
-        System.out.println();
-        // State remaining balance
-        System.out.println("# Remaining balance is ¢" + balance);
-        System.out.println();
-        // Update the total collected with the balance.
-        total = total + price;
+        if (balance >= price)
+        {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+       
+            // Subtract price from balance
+            balance -= price;
+            System.out.println();
+            // State remaining balance
+            System.out.println("# Remaining balance is ¢" + balance);
+            System.out.println();
+            // Update the total collected with the balance.
+            total = total + price;
         
         
-        tickets++;
+            tickets++;
+        }
+        else
+        {
+            System.out.println("Please insert an additional " + (balance - price) + "cents");
+        }
     }
 }
