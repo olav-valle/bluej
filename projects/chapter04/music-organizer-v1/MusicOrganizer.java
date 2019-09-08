@@ -10,6 +10,7 @@ public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
+    private String favoriteTrack;
         
     /**
      * Create a MusicOrganizer
@@ -28,6 +29,11 @@ public class MusicOrganizer
         files.add(filename);
     }
     
+    public void addFav()
+    {
+        files.add(favoriteTrack);
+    }
+    
     /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
@@ -43,7 +49,7 @@ public class MusicOrganizer
      */
     public void listFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(validIndex(index)) {
             String filename = files.get(index);
             System.out.println(filename);
         }
@@ -55,8 +61,36 @@ public class MusicOrganizer
      */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(validIndex(index)) {
             files.remove(index);
         }
+    }
+    
+    public /**boolean*/ void checkIndex(int indexToCheck)
+    {
+        //boolean isIndexValid;
+        if (!(indexToCheck >= 0 && indexToCheck < files.size())) {
+            System.out.println("The index specified is outside the valid range.");
+            System.out.println("Please specify an index between 0 and " + 
+                (files.size() - 1) + ".");
+            //isIndexValid = false;
+        }
+        else {
+            System.out.println(indexToCheck + " is a valid index number.");
+            //isIndexValid = true;
+        }
+        //return isIndexValid;
+    }
+    
+    public boolean validIndex(int indexToCheck)
+    {
+        boolean isIndexValid;
+        if (!(indexToCheck >=0 && indexToCheck < files.size())) {
+            isIndexValid = false;
+        }
+        else {
+            isIndexValid = true;
+        }
+        return isIndexValid;
     }
 }
