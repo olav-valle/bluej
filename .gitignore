@@ -1,3 +1,6 @@
 *.bluej
 *.class
 *.ctxt
+*.bak
+*.swp
+
