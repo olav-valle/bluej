@@ -20,6 +20,6 @@ public class Responder
      */
     public String generateResponse()
     {
-        return "That sounds interesting. Do Tell me more...";
+        return "That sounds interesting. Do tell me more...";
     }
 }

@@ -1,0 +1,18 @@
+public void listAllFiles()
+{
+	for(File file: files) {
+		System.out.println(file.getInfo());
+	}
+	
+}
+
+public void listMatching()
+{
+	boolean found = false;
+	
+	for(File file: files) {
+		if(f)	
+	}
+	
+	
+}

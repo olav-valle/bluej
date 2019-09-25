@@ -39,6 +39,6 @@ public class InputReader
         System.out.print("> ");         // print prompt
         int inputInt = reader.nextInt();
 
-        return inputInt;
+        return inputLine;
     }
 }
