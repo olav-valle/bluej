@@ -45,6 +45,7 @@ public class Auction
     }
     
     /**
+     * 
      * Make a bid for a lot.
      * A message is printed indicating whether the bid is
      * successful or not.

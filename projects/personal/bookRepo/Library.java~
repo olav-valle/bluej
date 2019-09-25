@@ -49,7 +49,6 @@ public class Library
     
     /**
      * Calls the printDetails method for each Book object in library.
-     *
      * Formatting of printed message is handled by Book object, 
      * see printDetails method in Book class.
      * 
