@@ -84,7 +84,7 @@ public class LogAnalyzer
     {
         int total = 0;
 
-        for(index = 0; index < hourCounts.length; index++){
+        for(int index = 0; index < hourCounts.length; index++){
             total = total + hourCounts[index];
         }
         return total;
