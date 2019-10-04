@@ -1,3 +1,4 @@
+import java.util.Arrays;
 /**
  * Read web server data and analyse hourly access patterns.
  * 
@@ -97,9 +98,14 @@ public class LogAnalyzer
      */
     public int busiestHour()
     {
-        return int max = Arrays.stream(hourCounts)
+        int max = Arrays.stream(hourCounts)
             .max()
             .getAsInt();
+
+        int hour = Arrays.asList(hourCounts)
+            .indexOf(max);
+
+        return hour;
     }
 
 
