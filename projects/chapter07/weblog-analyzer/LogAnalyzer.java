@@ -83,8 +83,9 @@ public class LogAnalyzer
     public int numberOfAccesses()
     {
         int total = 0;
-        while (hourCounts.hasNext()) {
-            total = total + hourCounts.next();
+
+        for(index = 0; index < hourCounts.length; index++){
+            total = total + hourCounts[index];
         }
         return total;
     }
