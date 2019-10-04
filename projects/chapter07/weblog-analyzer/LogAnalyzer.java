@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class LogAnalyzer
 {
     // Where to calculate the hourly access counts.
-    private int[] hourCounts;
+    private Integer[] hourCounts;
     // Use a LogfileReader to access the data.
     private LogfileReader reader;
 
@@ -16,10 +16,10 @@ public class LogAnalyzer
      * Create an object to analyze hourly web accesses.
      */
     public LogAnalyzer()
-    { 
+    {
         // Create the array object to hold the hourly
         // access counts.
-        hourCounts = new int[24];
+        hourCounts = new Integer[24];
         // Create the reader to obtain the data.
         reader = new LogfileReader();
     }
@@ -101,7 +101,7 @@ public class LogAnalyzer
         int max = Arrays.stream(hourCounts)
             .max()
             .getAsInt();
-
+change
         int hour = Arrays.asList(hourCounts)
             .indexOf(max);
 
