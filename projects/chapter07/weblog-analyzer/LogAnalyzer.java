@@ -24,6 +24,18 @@ public class LogAnalyzer
     }
 
     /**
+     * Constructs LogAnalyzer, that also creates log file with the name fileName.
+     * @param fileName N    ame to give generated log file.
+     */
+    public LogAnalyzer(String fileName)
+    {
+        hourCounts = new int[24];
+        LogfileCreator make = new LogfileCreator;
+        make.createFile(String fileName, int 200);
+        reader = new LogfileReader(String fileName);
+    }
+
+    /**
      * Analyze the hourly access data from the log file.
      */
     public void analyzeHourlyData()
@@ -45,7 +57,7 @@ public class LogAnalyzer
         System.out.println("Hr: Count");
         for(int hour = 0; hour < hourCounts.length; hour++) {
             System.out.println(hour + ": " + hourCounts[hour]);
-            hour++;
+
         }
     }
 
@@ -61,6 +73,7 @@ public class LogAnalyzer
 
         while (hour < hourCounts.length){
             System.out.println(hour + ":" + hourCounts[hour]);
+            hour++;
         }
     }
 
