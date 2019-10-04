@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 /**
  * Read web server data and analyse hourly access patterns.
  * 
@@ -30,7 +31,7 @@ public class LogAnalyzer
      */
     public LogAnalyzer(String fileName)
     {
-        hourCounts = new int[24];
+        hourCounts = new Integer[24];
         LogfileCreator make = new LogfileCreator();
         make.createFile(fileName, 200);
         reader = new LogfileReader(fileName);
@@ -98,14 +99,6 @@ public class LogAnalyzer
      */
     public int busiestHour()
     {
-        int max = Arrays.stream(hourCounts)
-            .max()
-            .getAsInt();
-change
-        int hour = Arrays.asList(hourCounts)
-            .indexOf(max);
-
-        return hour;
     }
 
 
