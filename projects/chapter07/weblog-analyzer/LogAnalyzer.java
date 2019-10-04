@@ -79,6 +79,7 @@ public class LogAnalyzer
 
     /**
      * Return the number of accesses recorded in the log file.
+     * @return Sum total of all accesses in log file.
      */
     public int numberOfAccesses()
     {
@@ -89,7 +90,19 @@ public class LogAnalyzer
         }
         return total;
     }
-    
+
+    /**
+     * Returns the busiest hour of the day.
+     * @return int value representing hour
+     */
+    public int busiestHour()
+    {
+        return int max = Arrays.stream(hourCounts)
+            .max()
+            .getAsInt();
+    }
+
+
     /**
      * Print the lines of data read by the LogfileReader
      */
