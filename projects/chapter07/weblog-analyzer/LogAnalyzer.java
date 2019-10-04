@@ -47,6 +47,23 @@ public class LogAnalyzer
             System.out.println(hour + ": " + hourCounts[hour]);
         }
     }
+
+    /**
+     * Print the hourly counts using a while loop.
+     * These should have been set with a prior
+     * call to analyzeHourlyData.
+     */
+    public void printHourlyCountsWhile()
+    {
+        int hour = 0;
+        System.out.println("Hr : Count");
+
+        while (hour < hourCounts.length){
+            System.out.println(hour + ":" + hourCounts[hour]);
+        }
+    }
+
+
     
     /**
      * Print the lines of data read by the LogfileReader
