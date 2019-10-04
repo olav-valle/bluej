@@ -30,9 +30,9 @@ public class LogAnalyzer
     public LogAnalyzer(String fileName)
     {
         hourCounts = new int[24];
-        LogfileCreator make = new LogfileCreator;
-        make.createFile(String fileName, int 200);
-        reader = new LogfileReader(String fileName);
+        LogfileCreator make = new LogfileCreator();
+        make.createFile(fileName, 200);
+        reader = new LogfileReader(fileName);
     }
 
     /**
@@ -77,7 +77,17 @@ public class LogAnalyzer
         }
     }
 
-
+    /**
+     * Return the number of accesses recorded in the log file.
+     */
+    public int numberOfAccesses()
+    {
+        int total = 0;
+        while (hourCounts.hasNext()) {
+            total = total + hourCounts.next();
+        }
+        return total;
+    }
     
     /**
      * Print the lines of data read by the LogfileReader
