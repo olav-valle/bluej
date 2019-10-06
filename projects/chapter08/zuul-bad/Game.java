@@ -15,7 +15,8 @@
  * @version 2016.02.29
  */
 
-
+//TODO add "back" command (also a log? see: Stack), items,
+// NPCs, player character(inventory, stats), combat system
 
 
 
