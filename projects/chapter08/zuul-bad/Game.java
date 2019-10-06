@@ -15,6 +15,10 @@
  * @version 2016.02.29
  */
 
+
+
+
+
 public class Game 
 {
     private Parser parser;
@@ -122,6 +126,7 @@ public class Game
             wantToQuit = quit(command);
         }
 
+
         return wantToQuit;
     }
 
@@ -138,7 +143,7 @@ public class Game
         System.out.println("around at the university.");
         System.out.println();
         System.out.println("Your command words are:");
-        System.out.println("   go quit help");
+        parser.showCommands();
     }
 
     /** 
