@@ -54,6 +54,10 @@ public class Room
             westExit = west;
         }
     }
+    public Room getExit(String direction)
+    {
+
+    }
 
     /**
      * @return The description of the room.
