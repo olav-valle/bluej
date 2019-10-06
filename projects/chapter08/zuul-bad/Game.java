@@ -33,6 +33,10 @@ public class Game
         parser = new Parser();
     }
 
+    /**
+     * Starts game from terminal.
+     * @param args None, I think?
+     */
     public static void main(String[] args)
     {
         Game game = new Game();
@@ -177,11 +181,15 @@ public class Game
         }
     }
 
+    /**
+     * Prints room description.
+     */
     private void printRoomDescription()
     {
         System.out.println(currentRoom.getLongDescription());
         System.out.println();
     }
+
     /** 
      * "Quit" was entered. Check the rest of the command to see
      * whether we really quit the game.
