@@ -42,10 +42,12 @@ public class CommandWords
     /**
      * Prints all words contained in validCommands
      */
-    public void listAll()
+    public String listAll()
     {
+        String commandString;
         for(String command : validCommands){
-            System.out.print(command + " ");
+            commandString += command + " ");
         }
+        return commandString;
     }
 }
