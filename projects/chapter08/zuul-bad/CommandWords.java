@@ -44,9 +44,9 @@ public class CommandWords
      */
     public String listAll()
     {
-        String commandString;
-        for(String command : validCommands){
-            commandString += command + " ");
+        String commandString = "";
+        for(String command : validCommands) {
+            commandString += command + " ";
         }
         return commandString;
     }
