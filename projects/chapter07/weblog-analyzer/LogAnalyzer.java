@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.Comparator;
 /**
  * Read web server data and analyse hourly access patterns.
  * 
@@ -99,6 +97,7 @@ public class LogAnalyzer
      */
     public int busiestHour()
     {
+        
     }
 
 
