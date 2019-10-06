@@ -49,11 +49,19 @@ public class Game
         office = new Room("in the computing admin office");
         
         // initialise room exits
-        outside.setExits(null, theater, lab, pub);
-        theater.setExits(null, null, null, outside);
-        pub.setExits(null, outside, null, null);
-        lab.setExits(outside, office, null, null);
-        office.setExits(null, null, null, lab);
+
+        outside.setExits("East", theater);
+        outside.setExits("South", lab);
+        outside.setExits("West", pub);
+
+        theater.setExits("West", outside);
+
+        pub.setExits("East", outside);
+
+        lab.setExits("North", outside);
+        lab.setExits("East", office);
+
+        office.setExits("West", lab);
 
         currentRoom = outside;  // start game outside
     }
@@ -163,7 +171,7 @@ public class Game
     private void printRoomDescription()
     {
         System.out.println("You are " + currentRoom.getDescription());
-        System.out.print(currentRoom.getExitString())
+        System.out.print(currentRoom.getExitString());
         System.out.println();
     }
     /** 
