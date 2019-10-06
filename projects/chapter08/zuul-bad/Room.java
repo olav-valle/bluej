@@ -86,10 +86,10 @@ public class Room
     {
         String exits = "Exits: ";
         if(northExit != null) {
-            exits = exits + "north "
+            exits = (exits + "north ");
         }
         if(northExit != null) {
-            exits = exits + "north "
+            exits = (exits + "north ");
         }
 
     }
