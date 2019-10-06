@@ -91,6 +91,7 @@ public class Room
         if(northExit != null) {
             exits = (exits + "north ");
         }
+        return exits;
 
     }
 
