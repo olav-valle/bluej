@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Iterator;
 /**
  * Class Room - a room in an adventure game.
  *
@@ -59,14 +61,13 @@ public class Room
      */
     public String getExitString()
     {
-        String exits = "Exits: ";
-        if(northExit != null) {
-            exits = (exits + "north ");
+        String validExits = "Exits: ";
+        Iterator it = (exits.keySet()).iterator();
+
+        while (it.hasNext()) {
+            validExits = validExits + it.next() + " ";
         }
-        if(northExit != null) {
-            exits = (exits + "north ");
-        }
-        return exits;
+        return validExits;
 
     }
 
