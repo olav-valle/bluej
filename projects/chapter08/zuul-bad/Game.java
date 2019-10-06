@@ -50,18 +50,18 @@ public class Game
         
         // initialise room exits
 
-        outside.setExits("East", theater);
-        outside.setExits("South", lab);
-        outside.setExits("West", pub);
+        outside.setExits("east", theater);
+        outside.setExits("south", lab);
+        outside.setExits("west", pub);
 
-        theater.setExits("West", outside);
+        theater.setExits("west", outside);
 
-        pub.setExits("East", outside);
+        pub.setExits("east", outside);
 
-        lab.setExits("North", outside);
-        lab.setExits("East", office);
+        lab.setExits("north", outside);
+        lab.setExits("east", office);
 
-        office.setExits("West", lab);
+        office.setExits("west", lab);
 
         currentRoom = outside;  // start game outside
     }
@@ -170,8 +170,7 @@ public class Game
 
     private void printRoomDescription()
     {
-        System.out.println("You are " + currentRoom.getDescription());
-        System.out.print(currentRoom.getExitString());
+        System.out.println(currentRoom.getLongDescription());
         System.out.println();
     }
     /** 

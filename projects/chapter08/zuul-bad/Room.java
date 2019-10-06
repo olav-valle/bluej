@@ -79,4 +79,14 @@ public class Room
         return description;
     }
 
+    /**
+     * Long description of the room, in the form:
+     *      "You are in the kitchen.
+     *      Exits: east west"
+     * @return Long description of room, and its exits.
+     */
+    public String getLongDescription()
+    {
+        return "You are " + description + ".\n" + getExitString();
+    }
 }
