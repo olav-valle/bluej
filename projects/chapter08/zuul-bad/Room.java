@@ -54,8 +54,43 @@ public class Room
             westExit = west;
         }
     }
+
+    /**
+     *  Returns the Room object that is connected to the exit in the specified direction.
+     * @param direction The direction of the exit
+     * @return the connected Room object.
+     */
     public Room getExit(String direction)
     {
+        if(direction.equals("north")) {
+            return northExit;
+        }
+        if(direction.equals("east")) {
+            return eastExit;
+        }
+        if(direction.equals("south")) {
+            return southExit;
+        }
+        if(direction.equals("west")) {
+            return westExit;
+        }
+        return null;
+    }
+
+    /**
+     *  Returns a description of the of the room's exits,
+     *  for example "Exits: south east"
+     * @return Description of available exits.
+     */
+    public String getExitString()
+    {
+        String exits = "Exits: ";
+        if(northExit != null) {
+            exits = exits + "north "
+        }
+        if(northExit != null) {
+            exits = exits + "north "
+        }
 
     }
 
