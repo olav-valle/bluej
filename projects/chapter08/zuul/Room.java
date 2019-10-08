@@ -33,10 +33,16 @@ public class Room
         this.item = null;
     }
 
+    /**
+     * Places an item in the room.
+     *
+     * @param item
+     */
     public void addItem(Item item)
     {
         this.item = item;
     }
+
     /**
      * Define the exits of this room.  Every direction either leads
      * to another room or is null (no exit there).
@@ -66,7 +72,7 @@ public class Room
      */
     public String getExitString()
     {
-        String validExits = "Exits: ";
+        String validExits = "Exits:";
 
         for(String exit : exits.keySet()) {
             validExits += " " + exit;
@@ -103,6 +109,8 @@ public class Room
      */
     public String getLongDescription()
     {
-        return "You are " + description + ".\n" + getExitString();
+        return "You are "
+                + description + ".\n"
+                + getExitString();
     }
 }
