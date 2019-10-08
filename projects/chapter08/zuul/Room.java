@@ -60,10 +60,21 @@ public class Room
     }
 
     /**
-     *  Returns a description of the of the room's exits,
-     *  for example "Exits: south east"
+     *  Returns a description of the of the room's exits.
+     *  For example "Exits: south east"
      * @return Description of available exits.
      */
+    public String getExitString()
+    {
+        String validExits = "Exits: ";
+
+        for(String exit : exits.keySet()) {
+            validExits += " " + exit;
+        }
+        return validExits;
+    }
+
+    /*
     public String getExitString()
     {
         String validExits = "Exits: ";
@@ -74,7 +85,7 @@ public class Room
         }
         return validExits;
 
-    }
+    }*/
 
     /**
      * @return The description of the room.
