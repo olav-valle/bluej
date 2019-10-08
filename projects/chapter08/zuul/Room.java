@@ -18,7 +18,7 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits; // Stores the rooms that this room connects to
-
+    private Item item;
 
     /**
      * Create a room described "description". Initially, it has
@@ -29,9 +29,14 @@ public class Room
     public Room(String description)
     {
         this.description = description;
-        exits = new HashMap<>();
+        this.exits = new HashMap<>();
+        this.item = null;
     }
 
+    public void addItem(Item item)
+    {
+        this.item = item;
+    }
     /**
      * Define the exits of this room.  Every direction either leads
      * to another room or is null (no exit there).

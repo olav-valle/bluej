@@ -49,6 +49,7 @@ public class Game
         office = new Room("in the computing admin office");
         
         // initialise room exits
+        // add items to rooms by calling Room.addItem(new Item())
 
         outside.setExits("east", theater);
         outside.setExits("south", lab);
@@ -57,6 +58,7 @@ public class Game
         theater.setExits("west", outside);
 
         pub.setExits("east", outside);
+        pub.addItem(new Item("Ardbeg", "A bottle of Ardbeg 10 y.o.", 1000.0));
 
         lab.setExits("north", outside);
         lab.setExits("east", office);
